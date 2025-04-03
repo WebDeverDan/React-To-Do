@@ -72,9 +72,9 @@ const TodoPage = () => {
       <div className="tasks-sum">
       {tasks.length === 1 ? (
           <p>There is {tasks.length} unfinished task. So Close!</p>
-        ) : (
+        ) : tasks.length > 1? (
         <p>There are {tasks.length} unfinished tasks. Get Going!</p>
-        )}
+        ): <p></p>}
       </div>
       <div className="task-list">
         {tasks.length === 0 ? (
